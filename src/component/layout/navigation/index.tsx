@@ -2,6 +2,7 @@ import { css } from "@emotion/css";
 import { Link } from "react-router-dom";
 import mq from "../../../styles/breakpoints";
 import theme from "../../../styles/theme";
+import { MenuIcon } from "../../ui/icons/menu-icon";
 
 function Navigation() {
   return (
@@ -50,6 +51,7 @@ function Navigation() {
           >
             Fikri A.R.
           </Link>
+          <MenuIcon width={24} height={24} />
         </div>
       </div>
     </nav>

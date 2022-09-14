@@ -1,13 +1,13 @@
 import { Global } from "@emotion/react";
 import { Outlet } from "react-router-dom";
-import NavigationMenu from "./component/layout/navigation-menu";
+import Navigation from "./component/layout/navigation";
 import normalizeCss from "./styles/normalize-css";
 
 function App() {
   return (
     <div>
       <Global styles={normalizeCss} />
-      <NavigationMenu />
+      <Navigation />
       hello world
       <Outlet />
     </div>

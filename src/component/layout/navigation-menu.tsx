@@ -1,5 +1,9 @@
 function NavigationMenu() {
-  return <nav></nav>;
+  return (
+    <nav>
+      <div></div>
+    </nav>
+  );
 }
 
 export default NavigationMenu;

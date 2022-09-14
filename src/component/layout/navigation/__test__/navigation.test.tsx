@@ -14,6 +14,7 @@ describe("NavigationMenu", () => {
       const navLogo = screen.getByText("Fikri A.R.");
 
       expect(navLogo).toBeVisible();
+      expect(navLogo).toHaveAttribute("href", "/");
     });
   });
 });

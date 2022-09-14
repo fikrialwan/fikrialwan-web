@@ -6,8 +6,14 @@ export interface ColorsType {
   blackGrey: string;
 }
 
+export interface FontsType {
+  blinker: string;
+  inter: string;
+}
+
 export interface ThemeType {
   colors: ColorsType;
+  fonts: any;
 }
 
 const theme: ThemeType = {
@@ -17,6 +23,10 @@ const theme: ThemeType = {
     grey: "#A9ADC1",
     blue: "#36A3FF",
     blackGrey: "#2E3039",
+  },
+  fonts: {
+    blinker: "'Blinker', sans-serif",
+    inter: "'Inter', sans-serif",
   },
 };
 

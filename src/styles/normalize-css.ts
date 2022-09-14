@@ -1,8 +1,11 @@
 import { css } from "@emotion/react";
 
 const normalizeCss = css`
+  @import url("https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&family=Inter:wght@400;500&display=swap");
+
   * {
     box-sizing: border-box;
+    font-family: "Blinker", sans-serif;
   }
 
   html {
@@ -185,6 +188,10 @@ const normalizeCss = css`
 
   [hidden] {
     display: none;
+  }
+
+  p {
+    font-family: "Inter", sans-serif;
   }
 `;
 

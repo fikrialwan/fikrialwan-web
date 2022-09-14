@@ -1,24 +1,13 @@
 import { Global } from "@emotion/react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import NavigationMenu from "./component/layout/navigation-menu";
 import normalizeCss from "./styles/normalize-css";
 
 function App() {
   return (
     <div>
       <Global styles={normalizeCss} />
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-        </ul>
-      </nav>
+      <NavigationMenu />
       hello world
       <Outlet />
     </div>

@@ -1,6 +1,8 @@
 # fikrialwan.com
 
-Welcome to my portfolio website built with [React.js](https://reactjs.org/) and hosted on [Vercel](https://vercel.com/). The design of this project is inspired by [kentcdodds.com/](https://kentcdodds.com/), [brittanychiang.com/](https://brittanychiang.com/) and [sonnylab.com/](https://sonnylab.com/).
+Welcome to my portfolio website built with [React.js](https://reactjs.org/) and hosted on [Vercel](https://vercel.com/). The design of this project is inspired by [Kent C. Dodds](https://kentcdodds.com/), [Brittany Chiang](https://brittanychiang.com/) and [Sonny Lazuardi](https://sonnylab.com/).
+
+Live: https://fikrialwan.com/
 
 ## Installation & Set Up
 
@@ -9,7 +11,7 @@ Welcome to my portfolio website built with [React.js](https://reactjs.org/) and 
 Step 1: Clone the project on your machine using the following command
 
 ```sh
-git clone https://github.com/fikrialwan/portfolio-website.git
+git clone https://github.com/fikrialwan/fikrialwan-web.git
 ```
 
 Step 2: In the project directory, run the following command on your terminal to install all the dependencies.
@@ -22,12 +24,6 @@ Step 3: Finally, run the following command to start the server in development mo
 
 ```sh
 yarn start
-```
-
-or, for npm
-
-```sh
-npm start
 ```
 
 ## Color Reference

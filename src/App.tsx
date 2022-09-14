@@ -1,5 +1,13 @@
+import { Global } from "@emotion/react";
+import normalizeCss from "./normalize-css";
+
 function App() {
-  return <div>hello world</div>;
+  return (
+    <div>
+      <Global styles={normalizeCss} />
+      <h1>hello world</h1>
+    </div>
+  );
 }
 
 export default App;

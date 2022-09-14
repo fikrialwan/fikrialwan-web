@@ -1,13 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import NavigationMenu from "../navigation-menu";
+import NavigationMenu from "..";
 
 describe("NavigationMenu", () => {
   describe("Navigation Logo", () => {
     it("render corectly", () => {
-      render(<MemoryRouter>
-        <NavigationMenu />
-      </MemoryRouter>);
+      render(
+        <MemoryRouter>
+          <NavigationMenu />
+        </MemoryRouter>
+      );
 
       const navLogo = screen.getByText("Fikri A.R.");
 

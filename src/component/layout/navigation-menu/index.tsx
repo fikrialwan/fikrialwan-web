@@ -1,7 +1,7 @@
 import { css } from "@emotion/css";
 import { Link } from "react-router-dom";
-import mq from "../../styles/breakpoints";
-import theme from "../../styles/theme";
+import mq from "../../../styles/breakpoints";
+import theme from "../../../styles/theme";
 
 function NavigationMenu() {
   return (

@@ -1,5 +1,5 @@
 import { Global } from "@emotion/react";
-import normalizeCss from "./normalize-css";
+import normalizeCss from "./styles/normalize-css";
 
 function App() {
   return (

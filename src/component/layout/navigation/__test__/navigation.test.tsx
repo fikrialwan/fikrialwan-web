@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import NavigationMenu from "..";
+import Navigation from "..";
 
 describe("NavigationMenu", () => {
   describe("Navigation Logo", () => {
     it("render corectly", () => {
       render(
         <MemoryRouter>
-          <NavigationMenu />
+          <Navigation />
         </MemoryRouter>
       );
 

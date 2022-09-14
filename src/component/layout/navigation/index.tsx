@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import mq from "../../../styles/breakpoints";
 import theme from "../../../styles/theme";
 
-function NavigationMenu() {
+function Navigation() {
   return (
     <nav
       className={css`
@@ -56,4 +56,4 @@ function NavigationMenu() {
   );
 }
 
-export default NavigationMenu;
+export default Navigation;

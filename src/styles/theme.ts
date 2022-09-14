@@ -1,5 +1,9 @@
 export interface ColorsType {
-  [index: string]: string;
+  black: string;
+  white: string;
+  grey: string;
+  blue: string;
+  blackGrey: string;
 }
 
 export interface ThemeType {

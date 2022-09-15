@@ -56,7 +56,7 @@ function Navigation() {
               cursor: pointer;
               color: ${theme.colors.white};
               font-weight: 600;
-              font-size: 32px;
+              font-size: 24px;
             `}
           >
             Fikri A.R.

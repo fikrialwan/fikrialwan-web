@@ -36,7 +36,7 @@ export default function NavigationMenu({
                 to={link}
                 className={({ isActive }) => css`
                   text-decoration: none;
-                  font-size: 24px;
+                  font-size: 16px;
                   font-weight: 600;
                   color: ${isActive ? theme.colors.white : theme.colors.grey};
                 `}

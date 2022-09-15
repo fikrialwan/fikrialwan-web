@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import mq from "src/styles/breakpoints";
 import theme from "src/styles/theme";
 import { MenuIcon, CloseIcon } from "src/component/ui/icons";
+import NavigationMenu from "./navigation-menu";
 
 function Navigation() {
   return (
@@ -72,6 +73,7 @@ function Navigation() {
             height={24}
           />
         </div>
+        <NavigationMenu />
       </div>
     </nav>
   );

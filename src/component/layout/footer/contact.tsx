@@ -12,7 +12,7 @@ export default function Contact() {
         max-width: 1400px;
         width: 100%;
         margin: 0 auto;
-        ${mq[3]} {
+        ${mq[0]} {
           flex-direction: row;
           align-items: center;
           justify-content: center;
@@ -25,7 +25,7 @@ export default function Contact() {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          ${mq[3]} {
+          ${mq[0]} {
             flex: 1;
           }
         `}
@@ -80,7 +80,7 @@ export default function Contact() {
       <div
         className={css`
           width: 100%;
-          ${mq[3]} {
+          ${mq[0]} {
             flex: 1;
           }
         `}

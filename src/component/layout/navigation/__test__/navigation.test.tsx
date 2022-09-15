@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Navigation from "..";
 
@@ -29,6 +29,30 @@ describe("Navigation", () => {
       const menuIcon = screen.getByTestId("menu-icon");
 
       expect(menuIcon).toBeVisible();
+    });
+
+    it("show close icon after click menu icon and show menu icon after click close icon", () => {
+      render(
+        <MemoryRouter>
+          <Navigation />
+        </MemoryRouter>
+      );
+
+      const menuIcon = screen.getByTestId("menu-icon");
+      const closeIcon = screen.getByTestId("close-icon");
+
+      expect(menuIcon).toBeVisible();
+      expect(closeIcon).not.toBeVisible();
+
+      fireEvent.click(menuIcon);
+
+      expect(menuIcon).not.toBeVisible();
+      expect(closeIcon).toBeVisible();
+
+      fireEvent.click(closeIcon);
+
+      expect(menuIcon).toBeVisible();
+      expect(closeIcon).not.toBeVisible();
     });
   });
 });

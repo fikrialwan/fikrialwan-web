@@ -8,6 +8,7 @@ export function CloseIcon({
 }: ComponentProps<"svg">) {
   return (
     <svg
+      data-testid="close-icon"
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}

@@ -14,7 +14,7 @@ describe("Navigation Menu", () => {
     navigationData.forEach(({ title, link }: NavigationDataType) => {
       const menu = screen.getByText(title);
 
-      expect(menu).toBeVisible();
+      expect(menu).not.toBeVisible();
       expect(menu).toHaveAttribute("href", link);
     });
   });

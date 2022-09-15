@@ -1,8 +1,8 @@
 import { css } from "@emotion/css";
 import { Link } from "react-router-dom";
-import mq from "@styles/breakpoints";
-import theme from "@styles/theme";
-import { MenuIcon, CloseIcon } from "@component/ui/icons";
+import mq from "src/styles/breakpoints";
+import theme from "src/styles/theme";
+import { MenuIcon, CloseIcon } from "src/component/ui/icons";
 
 function Navigation() {
   return (

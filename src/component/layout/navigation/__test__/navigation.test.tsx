@@ -28,7 +28,7 @@ describe("Navigation", () => {
 
       const menuIcon = screen.getByTestId("menu-icon");
 
-      expect(menuIcon).not.toBeVisible();
+      expect(menuIcon).toBeVisible();
     });
   });
 });

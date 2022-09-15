@@ -1,7 +1,7 @@
 import { Global } from "@emotion/react";
 import { Outlet } from "react-router-dom";
-import Navigation from "@component/layout/navigation";
-import normalizeCss from "@styles/normalize-css";
+import Navigation from "src/component/layout/navigation";
+import normalizeCss from "src/styles/normalize-css";
 
 function App() {
   return (

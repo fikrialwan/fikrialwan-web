@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import theme from "src/styles/theme";
+import Copyright from "./copyright";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
         color: ${theme.colors.white};
       `}
     >
-      ini halaman footer
+      <Copyright />
     </footer>
   );
 }

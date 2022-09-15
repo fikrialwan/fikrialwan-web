@@ -47,6 +47,8 @@ function Navigation() {
               text-decoration: none;
               cursor: pointer;
               color: ${theme.colors.white};
+              font-weight: 600;
+              font-size: 32px;
             `}
           >
             Fikri A.R.

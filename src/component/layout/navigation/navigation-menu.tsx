@@ -6,10 +6,12 @@ import mq from "src/styles/breakpoints";
 
 interface NavigationMenuProps {
   isNavToggleActive: Boolean;
+  onClick: Function;
 }
 
 export default function NavigationMenu({
   isNavToggleActive = false,
+  onClick,
 }: NavigationMenuProps) {
   return (
     <ul
@@ -34,6 +36,7 @@ export default function NavigationMenu({
             <li key={key}>
               <NavLink
                 to={link}
+                onClick={() => onClick()}
                 className={({ isActive }) => css`
                   text-decoration: none;
                   font-size: 16px;

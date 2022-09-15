@@ -7,7 +7,7 @@ describe("Navigation Menu", () => {
   it("Render correctly", () => {
     render(
       <MemoryRouter>
-        <NavigationMenu isNavToggleActive={false} />
+        <NavigationMenu isNavToggleActive={false} onClick={() => {}} />
       </MemoryRouter>
     );
 

@@ -86,7 +86,10 @@ function Navigation() {
             height={24}
           />
         </div>
-        <NavigationMenu isNavToggleActive={isMenuActive} />
+        <NavigationMenu
+          isNavToggleActive={isMenuActive}
+          onClick={() => setIsMenuActive(false)}
+        />
       </div>
     </nav>
   );

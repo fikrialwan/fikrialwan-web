@@ -51,7 +51,17 @@ function Navigation() {
           >
             Fikri A.R.
           </Link>
-          <MenuIcon width={24} height={24} />
+          <MenuIcon
+            className={css`
+              cursor: pointer;
+              display: none;
+              ${mq[0]} {
+                display: none;
+              }
+            `}
+            width={24}
+            height={24}
+          />
         </div>
       </div>
     </nav>

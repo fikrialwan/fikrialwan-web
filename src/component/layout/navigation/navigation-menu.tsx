@@ -5,20 +5,6 @@ import { navigationData, NavigationDataType } from "src/data";
 import mq from "src/styles/breakpoints";
 
 export default function NavigationMenu() {
-  const linkNotActive = css`
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 600;
-    color: ${theme.colors.grey};
-  `;
-
-  const linkActive = css`
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 600;
-    color: ${theme.colors.white};
-  `;
-
   return (
     <ul
       className={css`
@@ -36,9 +22,12 @@ export default function NavigationMenu() {
             <li key={key}>
               <NavLink
                 to={link}
-                className={({ isActive }) =>
-                  isActive ? linkActive : linkNotActive
-                }
+                className={({ isActive }) => css`
+                  text-decoration: none;
+                  font-size: 24px;
+                  font-weight: 600;
+                  color: ${isActive ? theme.colors.white : theme.colors.grey};
+                `}
                 end
               >
                 {title}

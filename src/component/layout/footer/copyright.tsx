@@ -23,7 +23,7 @@ export default function Copyright() {
         className={css`
           margin-top: 0;
           align-items: center;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 400;
           margin-bottom: 10px;
           color: ${theme.colors.grey};
@@ -60,7 +60,7 @@ export default function Copyright() {
       </p>
       <p
         className={css`
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 400;
           margin-bottom: 20px;
           margin-top: 0;

@@ -25,5 +25,17 @@ describe("Copyright footer", () => {
     expect(refThree).toHaveAttribute("href", "https://brittanychiang.com");
     expect(refThree).toHaveAttribute("target", "_blank");
     expect(refThree).toHaveAttribute("rel", "noreferrer noopener");
+
+    const designed = screen.getByText(/Designed and built by/);
+    expect(designed).toBeVisible();
+
+    const creator = screen.getByText("Fikri Alwan Ramadhan");
+    expect(creator).toBeVisible();
+    expect(creator).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/fikri-alwan/"
+    );
+    expect(creator).toHaveAttribute("target", "_blank");
+    expect(creator).toHaveAttribute("rel", "noreferrer noopener");
   });
 });

@@ -35,6 +35,10 @@ function Navigation() {
           display: flex;
           align-items: center;
           transition: all 0.5s ease;
+          flex-direction: column;
+          ${mq[0]} {
+            flex-direction: row;
+          }
         `}
       >
         <div
@@ -42,7 +46,7 @@ function Navigation() {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-grow: 1;
+            width: 100%;
           `}
         >
           <Link

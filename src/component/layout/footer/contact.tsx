@@ -49,9 +49,9 @@ export default function Contact() {
             color: ${theme.colors.grey};
           `}
         >
-          Although I'm not currently looking for any new opportunities, my inbox
-          is always open. Whether you have a question or just want to say hello,
-          I'll try my best to get back to you!
+          Currently looking for any new opportunities, my inbox is always open.
+          Whether you have a question or just want to say hello, I'll try my
+          best to get back to you!
         </p>
         <div>
           <a

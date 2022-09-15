@@ -1,6 +1,7 @@
 import { css } from "@emotion/css";
 import mq from "src/styles/breakpoints";
 import theme from "src/styles/theme";
+import Contact from "./contact";
 import Copyright from "./copyright";
 
 export default function Footer() {
@@ -24,6 +25,7 @@ export default function Footer() {
         }
       `}
     >
+      <Contact />
       <Copyright />
     </footer>
   );

@@ -4,8 +4,11 @@ import mq from "src/styles/breakpoints";
 import theme from "src/styles/theme";
 import { MenuIcon, CloseIcon } from "src/component/ui/icons";
 import NavigationMenu from "./navigation-menu";
+import { useState } from "react";
 
 function Navigation() {
+  const [isMenuActive, setIsMenuActive] = useState<Boolean>(false);
+
   return (
     <nav
       className={css`
@@ -57,18 +60,24 @@ function Navigation() {
           <MenuIcon
             className={css`
               cursor: pointer;
+              display: ${isMenuActive ? "none" : "block"};
               ${mq[0]} {
                 display: none;
               }
             `}
             width={24}
             height={24}
+            onClick={() => setIsMenuActive(true)}
           />
           <CloseIcon
             className={css`
               cursor: pointer;
-              display: none;
+              display: ${isMenuActive ? "block" : "none"};
+              ${mq[0]} {
+                display: none;
+              }
             `}
+            onClick={() => setIsMenuActive(false)}
             width={24}
             height={24}
           />

@@ -54,7 +54,6 @@ function Navigation() {
           <MenuIcon
             className={css`
               cursor: pointer;
-              display: none;
               ${mq[0]} {
                 display: none;
               }

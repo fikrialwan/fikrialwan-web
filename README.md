@@ -1,6 +1,6 @@
 # fikrialwan.com
 
-Welcome to my portfolio website built with [React.js](https://reactjs.org/) and hosted on [Vercel](https://vercel.com/). The design of this project is inspired by [Kent C. Dodds](https://kentcdodds.com/), [Brittany Chiang](https://brittanychiang.com/) and [Sonny Lazuardi](https://sonnylab.com/).
+Welcome to my personal website built with [React.js](https://reactjs.org/) and hosted on [Vercel](https://vercel.com/). The design of this project is inspired by [Kent C. Dodds](https://kentcdodds.com/), [Brittany Chiang](https://brittanychiang.com/) and [Sonny Lazuardi](https://sonnylab.com/).
 
 Live: https://fikrialwan.com/
 

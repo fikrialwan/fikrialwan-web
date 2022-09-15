@@ -13,7 +13,7 @@ export interface FontsType {
 
 export interface ThemeType {
   colors: ColorsType;
-  fonts: any;
+  fonts: FontsType;
 }
 
 const theme: ThemeType = {

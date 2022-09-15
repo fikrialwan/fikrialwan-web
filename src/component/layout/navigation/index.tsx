@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import { Link } from "react-router-dom";
 import mq from "../../../styles/breakpoints";
 import theme from "../../../styles/theme";
-import { MenuIcon } from "../../ui/icons/menu-icon";
+import { MenuIcon, CloseIcon } from "../../ui/icons";
 
 function Navigation() {
   return (
@@ -58,6 +58,14 @@ function Navigation() {
               ${mq[0]} {
                 display: none;
               }
+            `}
+            width={24}
+            height={24}
+          />
+          <CloseIcon
+            className={css`
+              cursor: pointer;
+              display: none;
             `}
             width={24}
             height={24}

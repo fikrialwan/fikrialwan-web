@@ -4,15 +4,27 @@ import { NavLink } from "react-router-dom";
 import { navigationData, NavigationDataType } from "src/data";
 import mq from "src/styles/breakpoints";
 
-export default function NavigationMenu() {
+interface NavigationMenuProps {
+  isNavToggleActive: Boolean;
+}
+
+export default function NavigationMenu({
+  isNavToggleActive = false,
+}: NavigationMenuProps) {
   return (
     <ul
       className={css`
-        display: none;
+        display: ${isNavToggleActive ? "flex" : "none"};
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
         gap: 50px;
         list-style: none;
         ${mq[0]} {
           display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
         }
       `}
     >

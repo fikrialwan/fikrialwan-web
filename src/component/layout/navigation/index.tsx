@@ -86,7 +86,7 @@ function Navigation() {
             height={24}
           />
         </div>
-        <NavigationMenu />
+        <NavigationMenu isNavToggleActive={isMenuActive} />
       </div>
     </nav>
   );

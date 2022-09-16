@@ -4,7 +4,7 @@ import mq from "src/styles/breakpoints";
 import github from "src/component/ui/images/github.png";
 import linkedin from "src/component/ui/images/linkedin.png";
 import theme from "src/styles/theme";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export default function SocialMediaMobile() {
   const [isShowSosmed, setIsShowSosmed] = useState<Boolean>(false);
@@ -12,12 +12,7 @@ export default function SocialMediaMobile() {
 
   let showSocialMedia: any;
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll.current);
-  }, []);
-
-  const handleScroll = useRef(() => {});
-  handleScroll.current = () => {
+  const handleScroll = () => {
     clearTimeout(showSocialMedia);
     setIsShowButtonSosmed(false);
     setIsShowSosmed(false);
@@ -30,6 +25,8 @@ export default function SocialMediaMobile() {
   const handleToggleShowSosmed = () => {
     setIsShowSosmed((prev) => !prev);
   };
+
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <aside

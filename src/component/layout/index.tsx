@@ -5,6 +5,7 @@ import normalizeCss from "src/styles/normalize-css";
 import theme from "src/styles/theme";
 import Footer from "./footer";
 import Navigation from "./navigation";
+import SocialMediaMobile from "./social-media-mobile";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,6 +23,7 @@ export default function Layout({ children }: LayoutProps) {
     >
       <Global styles={normalizeCss} />
       <Navigation />
+      <SocialMediaMobile />
       <main
         className={css`
           flex-grow: 1;

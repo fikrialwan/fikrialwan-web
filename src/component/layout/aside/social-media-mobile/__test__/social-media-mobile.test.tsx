@@ -9,7 +9,7 @@ describe("Social Media Mobile", () => {
     const button = screen.getByTestId("social-media-link-mobile-icon");
     expect(button).toBeVisible();
 
-    const linkdin = screen.getByAltText("Linkdin icon mobile");
+    const linkdin = screen.getByAltText("Linkedin icon mobile");
     expect(linkdin).toBeVisible();
     expect(linkdin.closest("a")).toHaveAttribute(
       "href",

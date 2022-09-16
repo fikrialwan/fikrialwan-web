@@ -4,7 +4,7 @@ import mq from "src/styles/breakpoints";
 import github from "src/component/ui/images/github.png";
 import linkedin from "src/component/ui/images/linkedin.png";
 import theme from "src/styles/theme";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function SocialMediaMobile() {
   const [isShowSosmed, setIsShowSosmed] = useState<Boolean>(false);
@@ -12,7 +12,12 @@ export default function SocialMediaMobile() {
 
   let showSocialMedia: any;
 
-  const handleScroll = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll.current);
+  }, []);
+
+  const handleScroll = useRef(() => {});
+  handleScroll.current = () => {
     clearTimeout(showSocialMedia);
     setIsShowButtonSosmed(false);
     setIsShowSosmed(false);
@@ -26,21 +31,22 @@ export default function SocialMediaMobile() {
     setIsShowSosmed((prev) => !prev);
   };
 
-  window.addEventListener("scroll", handleScroll);
-
   return (
     <aside
       className={css`
         position: fixed;
         bottom: 25px;
-        right: 50px;
+        right: 25px;
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
         transition: all 0.5s ease;
         transform: ${isShowButtonSosmed ? "scale(1)" : "scale(0)"};
-        ${mq[2]} {
+        ${mq[0]} {
+          right: 50px;
+        }
+        ${mq[1]} {
           display: none;
         }
       `}

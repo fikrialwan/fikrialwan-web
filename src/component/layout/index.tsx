@@ -5,7 +5,7 @@ import normalizeCss from "src/styles/normalize-css";
 import theme from "src/styles/theme";
 import Footer from "./footer";
 import Navigation from "./navigation";
-import SocialMediaMobile from "./social-media-mobile";
+import SocialMediaMobile from "./aside/social-media-mobile";
 
 interface LayoutProps {
   children: ReactNode;

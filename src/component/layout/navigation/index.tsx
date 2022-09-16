@@ -19,10 +19,10 @@ function Navigation() {
         top: 0;
         z-index: 10;
         transition: all 0.5s ease;
-        ${mq[2]} {
+        ${mq[0]} {
           padding: 25px 50px;
         }
-        ${mq[3]} {
+        ${mq[2]} {
           padding: 25px 75px;
         }
       `}

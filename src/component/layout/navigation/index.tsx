@@ -22,7 +22,6 @@ function Navigation() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll.current);
-    return window.removeEventListener("scroll", handleScroll.current);
   }, []);
 
   return (
@@ -30,7 +29,7 @@ function Navigation() {
       className={css`
         background-color: ${theme.colors.black};
         width: ${isScroll ? "calc(100% - 50px)" : "100%"};
-        padding: ${isScroll ? "15px 25px" : "25px 25px"};
+        padding: ${isScroll ? "20px 25px" : "25px 25px"};
         margin: ${isScroll ? "0 25px" : "0"};
         position: fixed;
         top: ${isScroll ? "10px" : "0"};

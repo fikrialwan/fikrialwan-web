@@ -1,4 +1,4 @@
-export interface imgType {
+export interface ImgType {
   url: string;
   alt: string;
 }

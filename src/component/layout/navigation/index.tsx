@@ -38,8 +38,8 @@ function Navigation() {
         transition: all 0.5s ease;
         ${isScroll
           ? `
-  border-radius: 18px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);`
+            border-radius: 18px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);`
           : ""}
         ${mq[0]} {
           padding: ${isScroll ? "15px 25px" : "25px 50px"};

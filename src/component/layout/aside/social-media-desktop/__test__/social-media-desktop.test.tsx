@@ -10,7 +10,7 @@ describe("Social Media Desktop Size", () => {
     expect(email).not.toBeVisible();
     expect(email).toHaveAttribute("href", "mailto:fikriar93@gmail.com");
 
-    const linkedin = screen.getByAltText("Linkedin icon image");
+    const linkedin = screen.getByAltText("Linkedin icon");
     expect(linkedin).toBeInTheDocument();
     expect(linkedin).not.toBeVisible();
     expect(linkedin).toHaveAttribute(
@@ -20,7 +20,7 @@ describe("Social Media Desktop Size", () => {
     expect(linkedin).toHaveAttribute("target", "_blank");
     expect(linkedin).toHaveAttribute("rel", "noreferrer noopener");
 
-    const github = screen.getByAltText("Github icon image");
+    const github = screen.getByAltText("Github icon");
     expect(github).toBeInTheDocument();
     expect(github).not.toBeVisible();
     expect(github).toHaveAttribute("href", "https://github.com/fikrialwan");

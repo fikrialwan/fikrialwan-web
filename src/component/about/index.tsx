@@ -16,13 +16,13 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
       <section
         className={css`
           display: flex;
-          margin-top: 50px;
+          margin: 50px 0 0 0;
           flex-direction: column;
           min-height: 100vh;
           align-items: center;
           justify-items: center;
-          gap: 10vw;
           ${mq[0]} {
+            gap: 10vw;
             margin-top: 0;
             flex-direction: row;
           }
@@ -30,7 +30,9 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
       >
         <div
           className={css`
+            max-height: 70vh;
             ${mq[0]} {
+              max-width: 100vh;
               flex: 2;
             }
           `}
@@ -38,7 +40,14 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
           <img
             className={css`
               border-radius: 18px;
+              max-height: 70vh;
               width: 100%;
+              object-fit: contain;
+              object-position: center;
+              ${mq[0]} {
+                max-width: 100vh;
+                object-position: left;
+              }
             `}
             src={data.img.url}
             alt={data.img.alt}
@@ -94,16 +103,32 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
     return (
       <section
         className={css`
-          min-height: 100vh;
           display: flex;
+          margin-top: 50px;
+          flex-direction: column;
+          min-height: 100vh;
           align-items: center;
           justify-items: center;
           gap: 10vw;
+          &:nth-of-type(odd) {
+            ${mq[0]} {
+              margin-top: 0;
+              flex-direction: row-reverse;
+            }
+          }
+          &:nth-of-type(even) {
+            ${mq[0]} {
+              margin-top: 0;
+              flex-direction: row;
+            }
+          }
         `}
       >
         <div
           className={css`
+            max-height: 70vh;
             ${mq[0]} {
+              max-width: 100vh;
               flex: 2;
             }
           `}
@@ -114,6 +139,16 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
             className={css`
               border-radius: 18px;
               width: 100%;
+              object-fit: contain;
+              object-position: center;
+              ${mq[0]} {
+                &:nth-of-type(even) {
+                  object-position: left;
+                }
+                &:nth-of-type(odd) {
+                  object-position: right;
+                }
+              }
             `}
           />
         </div>

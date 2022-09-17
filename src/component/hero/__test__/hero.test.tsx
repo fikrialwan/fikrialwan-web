@@ -1,16 +1,23 @@
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import { heroData } from "src/data";
 import Hero from "../hero";
 
 describe("Hero", () => {
   it("Render correctly for home page", () => {
-    render(<Hero isHome={true} data={heroData.home} />);
+    render(
+      <MemoryRouter>
+        <Hero isHome={true} data={heroData.home} />
+      </MemoryRouter>
+    );
 
     const greeting = screen.getByText(heroData.home.greeting!);
     expect(greeting).toBeVisible();
 
-    const title = screen.getByText(heroData.home.title);
-    expect(title).toBeVisible();
+    heroData.home.title.split("\n").forEach((title) => {
+      const titleTag = screen.getByText(title);
+      expect(titleTag).toBeVisible();
+    });
 
     const desc = screen.getByText(/a/);
     expect(desc).toBeVisible();
@@ -29,10 +36,16 @@ describe("Hero", () => {
   });
 
   it("Render correctly for about page", () => {
-    render(<Hero isHome={false} data={heroData.about} />);
+    render(
+      <MemoryRouter>
+        <Hero isHome={false} data={heroData.about} />
+      </MemoryRouter>
+    );
 
-    const title = screen.getByText(heroData.about.title);
-    expect(title).toBeVisible();
+    heroData.about.title.split("\n").forEach((title) => {
+      const titleTag = screen.getByText(title);
+      expect(titleTag).toBeVisible();
+    });
 
     const desc = screen.getByText(heroData.about.desc);
     expect(desc).toBeVisible();
@@ -42,10 +55,16 @@ describe("Hero", () => {
   });
 
   it("Render correctly for project page", () => {
-    render(<Hero isHome={false} data={heroData.projects} />);
+    render(
+      <MemoryRouter>
+        <Hero isHome={false} data={heroData.projects} />
+      </MemoryRouter>
+    );
 
-    const title = screen.getByText(heroData.projects.title);
-    expect(title).toBeVisible();
+    heroData.projects.title.split("\n").forEach((title) => {
+      const titleTag = screen.getByText(title);
+      expect(titleTag).toBeVisible();
+    });
 
     const desc = screen.getByText(heroData.projects.desc);
     expect(desc).toBeVisible();

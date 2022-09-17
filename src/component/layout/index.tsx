@@ -7,6 +7,7 @@ import Footer from "./footer";
 import Navigation from "./navigation";
 import Aside from "./aside";
 import mq from "src/styles/breakpoints";
+import ScrollToTop from "./scroll-to-top";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,6 +23,7 @@ export default function Layout({ children }: LayoutProps) {
         background-color: ${theme.colors.black};
       `}
     >
+      <ScrollToTop />
       <Global styles={normalizeCss} />
       <Navigation />
       <Aside />

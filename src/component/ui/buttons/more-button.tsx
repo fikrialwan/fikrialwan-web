@@ -32,7 +32,7 @@ export default function MoreButton({ title, url }: MoreButtonProps) {
         `}
         to={url}
       >
-        title
+        {title}
         <ArrowRightIcon
           width={18}
           height={15}

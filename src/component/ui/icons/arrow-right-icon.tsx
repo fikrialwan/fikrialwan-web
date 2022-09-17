@@ -19,16 +19,16 @@ export default function ArrowRightIcon({
       <path
         d="M1 8.5H19"
         stroke={fill}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M11.6365 1.13635L19.0001 8.49999L11.6365 15.8636"
         stroke={fill}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -1,10 +1,15 @@
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import { aboutData, AboutDataType, aboutHomeData } from "src/data";
 import About from "..";
 
 describe("About", () => {
   it("Render correctly on home page", () => {
-    render(<About isHome={true} data={aboutHomeData} />);
+    render(
+      <MemoryRouter>
+        <About isHome={true} data={aboutHomeData} />
+      </MemoryRouter>
+    );
 
     const title = screen.getByText("About me");
     expect(title).toBeVisible();
@@ -30,7 +35,11 @@ describe("About", () => {
 
   aboutData.forEach((about: AboutDataType, key: number) => {
     it(`Render correctly about ${key + 1} on about page`, () => {
-      render(<About isHome={false} data={about} />);
+      render(
+        <MemoryRouter>
+          <About isHome={false} data={about} />
+        </MemoryRouter>
+      );
 
       about.desc.split("\n").forEach((desc) => {
         const descAbout = screen.getByText(desc);

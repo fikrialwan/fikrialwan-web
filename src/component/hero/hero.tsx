@@ -9,7 +9,7 @@ export default function Hero({ isHome, data }: HeroPropsType) {
   if (isHome) {
     const {
       greeting,
-      title: heroTitle,
+      title: titles,
       desc,
       descHighlight,
       img: { url: imgUrl, alt: imgAlt },
@@ -20,7 +20,9 @@ export default function Hero({ isHome, data }: HeroPropsType) {
       <section>
         <article>
           <p>{greeting}</p>
-          <p>{heroTitle}</p>
+          {titles.split("\n").map((title: string, key: number) => (
+            <p key={key}>{title}</p>
+          ))}
           <p>
             {desc} <span>{descHighlight}</span>
           </p>
@@ -35,10 +37,22 @@ export default function Hero({ isHome, data }: HeroPropsType) {
     );
   } else {
     const {
-      title,
+      title: titles,
       desc,
       img: { url: imgUrl, alt: imgAlt },
     } = data;
-    return <section></section>;
+    return (
+      <section>
+        <article>
+          {titles.split("\n").map((title: string, key: number) => (
+            <p key={key}>{title}</p>
+          ))}
+          <p>{desc}</p>
+        </article>
+        <div>
+          <img src={imgUrl} alt={imgAlt} />
+        </div>
+      </section>
+    );
   }
 }

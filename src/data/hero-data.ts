@@ -21,7 +21,7 @@ export interface HeroDataType {
 export const heroData: HeroDataType = {
   home: {
     greeting: "Hello,",
-    title: "I'm Fikri Alwan \nRamadhan'",
+    title: "I'm Fikri Alwan\nRamadhan",
     desc: "a",
     descHighlight: "Front End Web Developer",
     img: {

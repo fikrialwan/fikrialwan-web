@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import theme from "./theme";
 
 const normalizeCss = css`
   @import url("https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&family=Inter:wght@400;500&display=swap");
@@ -15,6 +16,7 @@ const normalizeCss = css`
 
   body {
     margin: 0;
+    background-color: ${theme.colors.black};
   }
 
   main {
@@ -192,6 +194,7 @@ const normalizeCss = css`
 
   p {
     font-family: "Inter", sans-serif;
+    margin: 0;
   }
 
   section {

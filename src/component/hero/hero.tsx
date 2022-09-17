@@ -16,7 +16,23 @@ export default function Hero({ isHome, data }: HeroPropsType) {
       button,
     } = data;
     const { title: buttonTitle, link: buttonLink } = button!;
-    return <section></section>;
+    return (
+      <section>
+        <article>
+          <p>{greeting}</p>
+          <p>{heroTitle}</p>
+          <p>
+            {desc} <span>{descHighlight}</span>
+          </p>
+          <a href={buttonLink} target="_blank" rel="noreferrer noopener">
+            {buttonTitle}
+          </a>
+        </article>
+        <div>
+          <img src={imgUrl} alt={imgAlt} />
+        </div>
+      </section>
+    );
   } else {
     const {
       title,

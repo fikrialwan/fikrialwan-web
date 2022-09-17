@@ -1,4 +1,7 @@
 import { ButtonType, ImgType } from "src/util/types";
+import homeIlustration from "src/component/ui/images/hero-home-illustration.webp";
+import aboutIlustration from "src/component/ui/images/hero-about-illustration.webp";
+import projectsIlustration from "src/component/ui/images/hero-project-illustration.webp";
 
 export interface HeroContentType {
   greeting?: string;
@@ -22,7 +25,7 @@ export const heroData: HeroDataType = {
     desc: "a",
     descHighlight: "Front End Web Developer",
     img: {
-      url: "hero-home-illustration.webp",
+      url: homeIlustration,
       alt: "Home hero illustration",
     },
     button: {
@@ -34,7 +37,7 @@ export const heroData: HeroDataType = {
     title: "Hello,\nI'm Fikri Alwan Ramadhan,\nI'm a Front End Web Developer",
     desc: "I'm a developer who enthusiasm for Javascript, Typescript and React.",
     img: {
-      url: "hero-about-illustration.webp",
+      url: aboutIlustration,
       alt: "About hero illustration",
     },
   },
@@ -42,7 +45,7 @@ export const heroData: HeroDataType = {
     title: "This is my project,",
     desc: "You can see all of my project that I built, contributed, or designed using various technologies.",
     img: {
-      url: "hero-project-illustration.webp",
+      url: projectsIlustration,
       alt: "Project hero illustration",
     },
   },

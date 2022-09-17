@@ -20,7 +20,7 @@ export default function Footer() {
           padding: 0 100px;
         }
 
-        ${mq[3]} {
+        ${mq[2]} {
           padding: 0 150px;
         }
       `}

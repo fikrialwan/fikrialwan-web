@@ -16,7 +16,7 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
       <section
         className={css`
           display: flex;
-          margin: 50px 0 0 0;
+          margin: 100px 0 0 0;
           flex-direction: column;
           min-height: 100vh;
           align-items: center;

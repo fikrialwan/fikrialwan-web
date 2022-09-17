@@ -12,6 +12,7 @@ export default function Footer() {
         color: ${theme.colors.white};
         width: 100%;
         padding: 0 25px;
+        margin-top: 100px;
         ${mq[0]} {
           padding: 0 50px;
         }

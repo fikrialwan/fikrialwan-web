@@ -80,7 +80,9 @@ export default function Contact() {
       <div
         className={css`
           width: 100%;
+          max-height: 500vh;
           ${mq[0]} {
+            max-height: 100vh;
             flex: 1;
           }
         `}
@@ -92,7 +94,9 @@ export default function Contact() {
             width: 100%;
             object-fit: contain;
             object-position: center;
-            ${mq[3]} {
+            max-height: 50vh;
+            ${mq[0]} {
+              max-height: 100vh;
               object-position: right;
             }
           `}

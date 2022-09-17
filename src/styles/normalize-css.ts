@@ -193,6 +193,12 @@ const normalizeCss = css`
   p {
     font-family: "Inter", sans-serif;
   }
+
+  section {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export default normalizeCss;

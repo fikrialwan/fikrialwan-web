@@ -4,26 +4,48 @@ import mq from "src/styles/breakpoints";
 import theme from "src/styles/theme";
 import { MenuIcon, CloseIcon } from "src/component/ui/icons";
 import NavigationMenu from "./navigation-menu";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Navigation() {
   const [isMenuActive, setIsMenuActive] = useState<Boolean>(false);
+  const [isScroll, setIsScroll] = useState<Boolean>(false);
+
+  const handleScroll = useRef(() => {});
+
+  handleScroll.current = () => {
+    if (window.scrollY > 30) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll.current);
+    return window.removeEventListener("scroll", handleScroll.current);
+  }, []);
 
   return (
     <nav
       className={css`
         background-color: ${theme.colors.black};
-        width: 100%;
-        padding: 25px 25px;
+        width: ${isScroll ? "calc(100% - 50px)" : "100%"};
+        padding: ${isScroll ? "15px 25px" : "25px 25px"};
+        margin: ${isScroll ? "0 25px" : "0"};
         position: fixed;
-        top: 0;
+        top: ${isScroll ? "10px" : "0"};
         z-index: 10;
         transition: all 0.5s ease;
+        ${isScroll
+          ? `
+  border-radius: 18px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);`
+          : ""}
         ${mq[0]} {
-          padding: 25px 50px;
+          padding: ${isScroll ? "15px 25px" : "25px 50px"};
         }
         ${mq[2]} {
-          padding: 25px 75px;
+          padding: ${isScroll ? "15px 50px" : "25px 75px"};
         }
       `}
     >

@@ -132,15 +132,70 @@ export default function Hero({ isHome, data }: HeroPropsType) {
       img: { url: imgUrl, alt: imgAlt },
     } = data;
     return (
-      <section>
-        <article>
+      <section
+        className={css`
+          display: flex;
+          flex-direction: column-reverse;
+          min-height: 100vh;
+          align-items: center;
+          justify-items: center;
+          gap: 10vw;
+          margin-top: 60px;
+          ${mq[0]} {
+            flex-direction: row;
+          }
+        `}
+      >
+        <article
+          className={css`
+            flex: 4;
+          `}
+        >
           {titles.split("\n").map((title: string, key: number) => (
-            <p key={key}>{title}</p>
+            <p
+              key={key}
+              className={css`
+                font-family: ${theme.fonts.blinker};
+                color: ${theme.colors.white};
+
+                font-size: 48px;
+                font-weight: 600;
+              `}
+            >
+              {title}
+            </p>
           ))}
-          <p>{desc}</p>
+          <p
+            className={css`
+              font-family: ${theme.fonts.blinker};
+              font-weight: 600;
+              font-size: 40px;
+              color: ${theme.colors.grey};
+              margin-bottom: 25px;
+            `}
+          >
+            {desc}
+          </p>
         </article>
-        <div>
-          <img src={imgUrl} alt={imgAlt} />
+        <div
+          className={css`
+            flex: 3;
+            width: 100%;
+          `}
+        >
+          <img
+            src={imgUrl}
+            alt={imgAlt}
+            className={css`
+              height: 60vh;
+              width: 100%;
+              object-fit: contain;
+              object-position: center;
+              ${mq[0]} {
+                height: auto;
+              }
+            `}
+          />
         </div>
       </section>
     );

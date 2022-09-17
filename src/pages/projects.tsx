@@ -1,5 +1,12 @@
+import Hero from "src/component/hero/hero";
+import { heroData } from "src/data";
+
 function Projects() {
-  return <div>Projects</div>;
+  return (
+    <>
+      <Hero isHome={false} data={heroData.projects} />
+    </>
+  );
 }
 
 export default Projects;

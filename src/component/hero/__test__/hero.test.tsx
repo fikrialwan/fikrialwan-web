@@ -19,7 +19,7 @@ describe("Hero", () => {
       expect(titleTag).toBeVisible();
     });
 
-    const desc = screen.getByText(/a/);
+    const desc = screen.getByText(heroData.home.desc);
     expect(desc).toBeVisible();
 
     const descHighlight = screen.getByText(heroData.home.descHighlight!);

@@ -18,7 +18,7 @@ describe("Hero", () => {
     const descHighlight = screen.getByText(heroData.home.descHighlight!);
     expect(descHighlight).toBeVisible();
 
-    const image = screen.getByAltText(heroData.home.img);
+    const image = screen.getByAltText(heroData.home.img.alt);
     expect(image).toBeVisible();
 
     const button = screen.getByText(heroData.home.button!.title);
@@ -37,7 +37,7 @@ describe("Hero", () => {
     const desc = screen.getByText(heroData.about.desc);
     expect(desc).toBeVisible();
 
-    const image = screen.getByAltText(heroData.about.img);
+    const image = screen.getByAltText(heroData.about.img.alt);
     expect(image).toBeVisible();
   });
 
@@ -50,7 +50,7 @@ describe("Hero", () => {
     const desc = screen.getByText(heroData.projects.desc);
     expect(desc).toBeVisible();
 
-    const image = screen.getByAltText(heroData.projects.img);
+    const image = screen.getByAltText(heroData.projects.img.alt);
     expect(image).toBeVisible();
   });
 });

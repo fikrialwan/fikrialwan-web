@@ -14,6 +14,7 @@ export default function TechStack({ data }: TechStackProps) {
         flex-wrap: wrap;
         padding-left: 0;
         gap: 10px;
+        list-style: none;
       `}
     >
       {data.map((tech: string, key: number) => {

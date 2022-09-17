@@ -5,12 +5,12 @@ import theme from "src/styles/theme";
 import TechStack from "../tech-stack";
 import MoreButton from "../ui/buttons/more-button";
 
-interface AboutProps {
+interface AboutSectionProps {
   isHome: Boolean;
   data: AboutDataType;
 }
 
-export default function About({ isHome, data }: AboutProps) {
+export default function AboutSection({ isHome, data }: AboutSectionProps) {
   if (isHome) {
     return (
       <section
@@ -22,7 +22,6 @@ export default function About({ isHome, data }: AboutProps) {
           align-items: center;
           justify-items: center;
           gap: 10vw;
-          padding: 0 150px;
           ${mq[0]} {
             margin-top: 0;
             flex-direction: row;
@@ -100,7 +99,6 @@ export default function About({ isHome, data }: AboutProps) {
           align-items: center;
           justify-items: center;
           gap: 10vw;
-          padding: 0 150px;
         `}
       >
         <div

@@ -15,7 +15,6 @@ export default function MoreButton({ title, url }: MoreButtonProps) {
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: flex-end;
       `}
     >
       <Link

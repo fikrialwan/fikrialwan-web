@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { aboutData, AboutDataType, aboutHomeData } from "src/data";
-import About from "..";
+import AboutSection from "..";
 
 describe("About", () => {
   it("Render correctly on home page", () => {
     render(
       <MemoryRouter>
-        <About isHome={true} data={aboutHomeData} />
+        <AboutSection isHome={true} data={aboutHomeData} />
       </MemoryRouter>
     );
 
@@ -37,7 +37,7 @@ describe("About", () => {
     it(`Render correctly about ${key + 1} on about page`, () => {
       render(
         <MemoryRouter>
-          <About isHome={false} data={about} />
+          <AboutSection isHome={false} data={about} />
         </MemoryRouter>
       );
 

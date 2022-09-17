@@ -1,7 +1,4 @@
-export interface HeroButtonType {
-  title: string;
-  link: string;
-}
+import { ButtonType } from "src/util/types";
 
 export interface HeroContentType {
   greeting?: string;
@@ -9,7 +6,7 @@ export interface HeroContentType {
   desc: string;
   img: string;
   descHighlight?: string;
-  button?: HeroButtonType;
+  button?: ButtonType;
 }
 
 export interface HeroDataType {

@@ -14,6 +14,11 @@ describe("About", () => {
       expect(descAbout).toBeVisible();
     });
 
+    const descToTechStack = screen.getByText(
+      "Here are a few technologies I've been working with recently:"
+    );
+    expect(descToTechStack).toBeVisible();
+
     aboutHomeData.techStack!.forEach((tech) => {
       const techAbout = screen.getByText(tech);
       expect(techAbout).toBeVisible();

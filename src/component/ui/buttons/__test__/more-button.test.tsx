@@ -1,15 +1,20 @@
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import MoreButton from "../more-button";
 
 describe("More button", () => {
   it("Render correctly", () => {
-    render(<MoreButton title="More info" url="about" />);
+    render(
+      <MemoryRouter>
+        <MoreButton title="More info" url="/about" />
+      </MemoryRouter>
+    );
 
     const buttonTitle = screen.getByText("More info");
     expect(buttonTitle).toBeVisible();
-    expect(buttonTitle).toHaveAttribute("href", "about");
+    expect(buttonTitle).toHaveAttribute("href", "/about");
 
-    const buttonIcon = screen.getByAltText("arrow-right-icon");
+    const buttonIcon = screen.getByTestId("arrow-right-icon");
     expect(buttonIcon).toBeVisible();
   });
 });

@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { render, screen } from "@testing-library/react";
 import SocialMediaDesktop from "..";
 
@@ -13,18 +14,21 @@ describe("Social Media Desktop Size", () => {
     const linkedin = screen.getByAltText("Linkedin icon");
     expect(linkedin).toBeInTheDocument();
     expect(linkedin).not.toBeVisible();
-    expect(linkedin).toHaveAttribute(
+    expect(linkedin.closest("a")).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/fikri-alwan/"
     );
-    expect(linkedin).toHaveAttribute("target", "_blank");
-    expect(linkedin).toHaveAttribute("rel", "noreferrer noopener");
+    expect(linkedin.closest("a")).toHaveAttribute("target", "_blank");
+    expect(linkedin.closest("a")).toHaveAttribute("rel", "noreferrer noopener");
 
     const github = screen.getByAltText("Github icon");
     expect(github).toBeInTheDocument();
     expect(github).not.toBeVisible();
-    expect(github).toHaveAttribute("href", "https://github.com/fikrialwan");
-    expect(github).toHaveAttribute("target", "_blank");
-    expect(github).toHaveAttribute("rel", "noreferrer noopener");
+    expect(github.closest("a")).toHaveAttribute(
+      "href",
+      "https://github.com/fikrialwan"
+    );
+    expect(github.closest("a")).toHaveAttribute("target", "_blank");
+    expect(github.closest("a")).toHaveAttribute("rel", "noreferrer noopener");
   });
 });

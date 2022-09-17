@@ -1,4 +1,4 @@
-import SocialMediaDesktop from "./social-media-dsektop";
+import SocialMediaDesktop from "./social-media-desktop";
 import SocialMediaMobile from "./social-media-mobile";
 
 export default function Aside() {

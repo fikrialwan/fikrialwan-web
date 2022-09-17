@@ -8,9 +8,7 @@ describe("Social Media Desktop Size", () => {
     const email = screen.getByText("fikriar93@gmail.com");
     expect(email).toBeInTheDocument();
     expect(email).not.toBeVisible();
-    expect(email).toHaveAttribute("href", "maito: fikriar93@gmail.com");
-    expect(email).toHaveAttribute("target", "_blank");
-    expect(email).toHaveAttribute("rel", "noreferrer noopener");
+    expect(email).toHaveAttribute("href", "mailto:fikriar93@gmail.com");
 
     const linkedin = screen.getByAltText("Linkedin icon image");
     expect(linkedin).toBeInTheDocument();

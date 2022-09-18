@@ -25,13 +25,13 @@ describe("Experience", () => {
   it("first description will be show and then desc will change when click the company and position to the desc of experience in the company", async () => {
     render(<Experience />);
 
-    const firstDesc = screen.queryByText(experienceData[0].desc);
+    let firstDesc = screen.queryByText(experienceData[0].desc);
     expect(firstDesc).toBeVisible();
 
-    const secondDesc = screen.queryByText(experienceData[1].desc);
+    let secondDesc = screen.queryByText(experienceData[1].desc);
     expect(secondDesc).toEqual(null);
 
-    const thirdDesc = screen.queryByText(experienceData[1].desc);
+    let thirdDesc = screen.queryByText(experienceData[2].desc);
     expect(thirdDesc).toEqual(null);
 
     const secondCompany = screen
@@ -39,10 +39,13 @@ describe("Experience", () => {
       .closest("article")!;
     fireEvent.click(secondCompany);
 
+    firstDesc = screen.queryByText(experienceData[0].desc);
     expect(firstDesc).toEqual(null);
 
+    secondDesc = screen.queryByText(experienceData[1].desc);
     expect(secondDesc).toBeVisible();
 
+    thirdDesc = screen.queryByText(experienceData[2].desc);
     expect(thirdDesc).toEqual(null);
 
     const thirdCompany = screen
@@ -50,10 +53,13 @@ describe("Experience", () => {
       .closest("article")!;
     fireEvent.click(thirdCompany);
 
+    firstDesc = screen.queryByText(experienceData[0].desc);
     expect(firstDesc).toEqual(null);
 
+    secondDesc = screen.queryByText(experienceData[1].desc);
     expect(secondDesc).toEqual(null);
 
+    thirdDesc = screen.queryByText(experienceData[2].desc);
     expect(thirdDesc).toBeVisible();
 
     const firstCompany = screen
@@ -61,10 +67,13 @@ describe("Experience", () => {
       .closest("article")!;
     fireEvent.click(firstCompany);
 
+    firstDesc = screen.queryByText(experienceData[0].desc);
     expect(firstDesc).toBeVisible();
 
+    secondDesc = screen.queryByText(experienceData[1].desc);
     expect(secondDesc).toEqual(null);
 
+    thirdDesc = screen.queryByText(experienceData[2].desc);
     expect(thirdDesc).toEqual(null);
   });
 });

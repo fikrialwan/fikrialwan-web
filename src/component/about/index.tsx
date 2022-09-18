@@ -168,6 +168,7 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
                   font-size: 16px;
                   color: ${theme.colors.grey};
                 `}
+                key={key}
               >
                 {desc}
               </p>

@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { experienceData, ExperienceDataType } from "src/data/experience-data";
 
 export default function Experience() {
+  const [experienceKeyShow, setExperienceKeyShow] = useState<number>(0);
+
+  const handleCompanyClick = (key: number) => {
+    setExperienceKeyShow(key);
+  };
+
   return (
     <section>
       <h2>My Experience</h2>
@@ -9,7 +16,7 @@ export default function Experience() {
           {experienceData.map(
             ({ company, position }: ExperienceDataType, key: number) => {
               return (
-                <article key={key}>
+                <article key={key} onClick={() => handleCompanyClick(key)}>
                   <h3>{company}</h3>
                   <ul>
                     <li>{position}</li>
@@ -20,7 +27,7 @@ export default function Experience() {
           )}
         </section>
         <section>
-          <p>{experienceData[0].desc}</p>
+          <p>{experienceData[experienceKeyShow].desc}</p>
         </section>
       </article>
     </section>

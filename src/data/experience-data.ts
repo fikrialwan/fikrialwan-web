@@ -17,7 +17,7 @@ export const experienceData: ExperienceDataType[] = [
   },
   {
     company: "Tanjungpura University",
-    position: "Student",
+    position: "Undergraduate Student",
     desc: "I am an undergraduate student at Tanjungpura Unversity majoring in computer system engineering since July 2016 and will be finished on October 2022. when I was in college I focused on studying mobile and web development. My final project research made a website to detect clickbait news from news titles using Multinomial Naive Bayes algorithm.",
   },
   {

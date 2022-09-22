@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import LinkIcon from "src/component/ui/icons/link-icon";
+import { LinkIcon } from "src/component/ui/icons";
 import mq from "src/styles/breakpoints";
 import github from "src/component/ui/images/github.png";
 import linkedin from "src/component/ui/images/linkedin.png";

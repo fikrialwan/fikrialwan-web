@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export default function GithubIcon({
+export function GithubIcon({
   fill = "white",
   height = "30px",
   width = "30px",

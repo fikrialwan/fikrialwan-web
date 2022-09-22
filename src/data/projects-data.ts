@@ -1,6 +1,7 @@
 export enum LinkProjects {
   github,
   link,
+  figma,
 }
 
 export interface LinkProjectsType {

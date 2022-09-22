@@ -1,7 +1,7 @@
 import { css } from "@emotion/css";
 import { Link } from "react-router-dom";
 import theme from "src/styles/theme";
-import ArrowRightIcon from "../icons/arrow-right-icon";
+import { ArrowRightIcon } from "../icons";
 
 interface MoreButtonProps {
   title: string;

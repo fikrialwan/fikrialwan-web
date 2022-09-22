@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export default function ArrowRightIcon({
+export function ArrowRightIcon({
   width = "20",
   height = "17",
   fill = "white",

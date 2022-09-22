@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export default function FigmaIcon({
+export function FigmaIcon({
   fill = "white",
   width = "30px",
   height = "30px",

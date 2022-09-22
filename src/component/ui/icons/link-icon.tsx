@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export default function LinkIcon({
+export function LinkIcon({
   width = "26",
   height = "26",
   fill = "white",

@@ -28,4 +28,20 @@ describe("Project", () => {
         expect(descComp).toBeVisible();
       });
   });
+
+  it("Render correctly in project page", () => {
+    render(
+      <MemoryRouter>
+        <ProjectSection isHome={false} />
+      </MemoryRouter>
+    );
+
+    projectsData.forEach(({ name, desc, techStack, url }: ProjectsDataType) => {
+      const nameComp = screen.getByText(name);
+      expect(nameComp).toBeVisible();
+
+      const descComp = screen.getByText(desc);
+      expect(descComp).toBeVisible();
+    });
+  });
 });

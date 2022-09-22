@@ -117,8 +117,8 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
                               rel="noreferrer noopener"
                             >
                               <FigmaIcon
-                                width={30}
-                                height={30}
+                                width={28}
+                                height={28}
                                 className={css`
                                   margin-left: 5px;
                                   cursor: pointer;
@@ -241,8 +241,8 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
                           rel="noreferrer noopener"
                         >
                           <FigmaIcon
-                            width={30}
-                            height={30}
+                            width={28}
+                            height={28}
                             className={css`
                               margin-left: 5px;
                               cursor: pointer;

@@ -18,6 +18,21 @@ export interface ProjectsDataType {
 
 export const projectsData: ProjectsDataType[] = [
   {
+    name: "Sipallima",
+    desc: "Pallima village information system website",
+    url: [
+      {
+        url: "https://github.com/fikrialwan/sipallima",
+        type: LinkProjects.github,
+      },
+      {
+        url: "https://sipallima.fikrialwan.com/",
+        type: LinkProjects.link,
+      },
+    ],
+    techStack: ["HTML", "CSS", "JavaScript"],
+  },
+  {
     name: "Calci Indonesia",
     desc: "Build a webstie e-commerce for sport company named Calci Indonesia.",
     url: [
@@ -28,6 +43,10 @@ export const projectsData: ProjectsDataType[] = [
       {
         url: "https://calci.fikrialwan.com/",
         type: LinkProjects.link,
+      },
+      {
+        url: "https://www.figma.com/file/JhCecvgczO1sDwAIgFqSSc/calciindonesia.com?node-id=7%3A2",
+        type: LinkProjects.figma,
       },
     ],
     techStack: ["HTML", "CSS", "JavaScript"],

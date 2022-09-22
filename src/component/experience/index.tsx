@@ -17,6 +17,7 @@ export default function Experience() {
         display: flex;
         flex-direction: column;
         justify-items: center;
+        margin-bottom: 50px;
       `}
     >
       <h2

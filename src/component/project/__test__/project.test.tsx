@@ -1,18 +1,18 @@
 /* eslint-disable testing-library/no-node-access */
 import { render, screen } from "@testing-library/react";
-import {
-  LinkProjects,
-  LinkProjectsType,
-  projectsData,
-  ProjectsDataType,
-} from "src/data/projects-data";
+import { MemoryRouter } from "react-router-dom";
+import { projectsData, ProjectsDataType } from "src/data/projects-data";
 import ProjectSection from "..";
 
 describe("Project", () => {
   it("Render correctly in home page", () => {
-    render(<ProjectSection isHome={true} />);
+    render(
+      <MemoryRouter>
+        <ProjectSection isHome={true} />
+      </MemoryRouter>
+    );
 
-    const title = screen.getByText("Projects");
+    const title = screen.getByText("My Projects");
     expect(title).toBeVisible();
 
     const more = screen.getByText("More Projects");
@@ -26,37 +26,6 @@ describe("Project", () => {
 
         const descComp = screen.getByText(desc);
         expect(descComp).toBeVisible();
-
-        techStack.forEach((tech: string) => {
-          const techComp = screen.getByText(tech);
-          expect(techComp).toBeVisible();
-        });
-
-        url
-          .filter(({ type }: LinkProjectsType) => type === LinkProjects.github)
-          .forEach((link: LinkProjectsType) => {
-            const urlComp = screen.getByTestId("github-icon");
-            expect(urlComp).toBeVisible();
-            expect(urlComp.closest("a")).toHaveAttribute("href", link.url);
-            expect(urlComp.closest("a")).toHaveAttribute("target", "_blank");
-            expect(urlComp.closest("a")).toHaveAttribute(
-              "rel",
-              "noreferrer noopener"
-            );
-          });
-
-        url
-          .filter(({ type }: LinkProjectsType) => type === LinkProjects.link)
-          .forEach((link: LinkProjectsType) => {
-            const urlComp = screen.getByTestId("social-media-link-mobile-icon");
-            expect(urlComp).toBeVisible();
-            expect(urlComp.closest("a")).toHaveAttribute("href", link.url);
-            expect(urlComp.closest("a")).toHaveAttribute("target", "_blank");
-            expect(urlComp.closest("a")).toHaveAttribute(
-              "rel",
-              "noreferrer noopener"
-            );
-          });
       });
   });
 });

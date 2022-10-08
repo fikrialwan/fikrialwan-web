@@ -3,7 +3,7 @@ import { AboutDataType } from "src/data";
 import mq from "src/styles/breakpoints";
 import theme from "src/styles/theme";
 import TechStack from "../tech-stack";
-import MoreButton from "../ui/buttons/more-button";
+// import MoreButton from "../ui/buttons/more-button";
 
 interface AboutSectionProps {
   isHome: Boolean;
@@ -95,7 +95,7 @@ export default function AboutSection({ isHome, data }: AboutSectionProps) {
             Here are a few technologies I've been working with recently:
           </p>
           <TechStack data={data.techStack!} />
-          <MoreButton title="More info" url="/about" />
+          {/* <MoreButton title="More info" url="/about" /> */}
         </article>
       </section>
     );

@@ -1,12 +1,6 @@
-export enum LinkProjects {
-  github,
-  link,
-  figma,
-}
-
 export interface LinkProjectsType {
   url: string;
-  type: LinkProjects;
+  type: string;
 }
 
 export interface ProjectsDataType {
@@ -23,11 +17,11 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://github.com/fikrialwan/sipallima",
-        type: LinkProjects.github,
+        type: "github",
       },
       {
         url: "https://sipallima.fikrialwan.com/",
-        type: LinkProjects.link,
+        type: "link",
       },
     ],
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -38,15 +32,15 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://github.com/warcodes/calciindonesia-web",
-        type: LinkProjects.github,
+        type: "github",
       },
       {
         url: "https://calci.fikrialwan.com/",
-        type: LinkProjects.link,
+        type: "link",
       },
       {
         url: "https://www.figma.com/file/JhCecvgczO1sDwAIgFqSSc/calciindonesia.com?node-id=7%3A2",
-        type: LinkProjects.figma,
+        type: "figma",
       },
     ],
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -57,7 +51,7 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://cacingnipah-2021.web.app/",
-        type: LinkProjects.link,
+        type: "link",
       },
     ],
     techStack: [
@@ -74,11 +68,11 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://github.com/unknownunnamed/fe-declickbait",
-        type: LinkProjects.github,
+        type: "github",
       },
       {
         url: "https://github.com/unknownunnamed/be-declickbait",
-        type: LinkProjects.github,
+        type: "github",
       },
     ],
     techStack: [
@@ -99,11 +93,11 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://github.com/unknownunnamed/fe-weblabel",
-        type: LinkProjects.github,
+        type: "github",
       },
       {
         url: "https://github.com/unknownunnamed/be-weblabel",
-        type: LinkProjects.github,
+        type: "github",
       },
     ],
     techStack: [
@@ -124,7 +118,7 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://himaster.web.app/",
-        type: LinkProjects.link,
+        type: "link",
       },
     ],
     techStack: [
@@ -142,7 +136,7 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://play.google.com/store/apps/details?id=id.co.pifa.pifa",
-        type: LinkProjects.link,
+        type: "link",
       },
     ],
     techStack: ["Dart", "Flutter"],
@@ -153,7 +147,7 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://play.google.com/store/apps/details?id=id.bersihberes.bersih_beres",
-        type: LinkProjects.link,
+        type: "link",
       },
     ],
     techStack: ["Dart", "Flutter"],
@@ -164,7 +158,7 @@ export const projectsData: ProjectsDataType[] = [
     url: [
       {
         url: "https://play.google.com/store/apps/details?id=bengkayang.dprd.sinaare",
-        type: LinkProjects.link,
+        type: "link",
       },
     ],
     techStack: ["Dart", "Flutter"],

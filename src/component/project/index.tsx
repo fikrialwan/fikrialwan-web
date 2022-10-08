@@ -1,20 +1,33 @@
+import { useQuery } from "@apollo/client";
 import { css } from "@emotion/css";
-import {
-  LinkProjects,
-  LinkProjectsType,
-  projectsData,
-  ProjectsDataType,
-} from "src/data/projects-data";
+import { GET_PROJECTS } from "src/apollo/query";
+import { LinkProjectsType, ProjectsDataType } from "src/data/projects-data";
 import theme from "src/styles/theme";
 import TechStack from "../tech-stack";
 import MoreButton from "../ui/buttons/more-button";
 import { FigmaIcon, GithubIcon, LinkIcon } from "../ui/icons";
-
 interface ProjectSectionProps {
   isHome: Boolean;
 }
 
 export default function ProjectSection({ isHome }: ProjectSectionProps) {
+  const { loading, error, data } = useQuery(GET_PROJECTS);
+
+  if (loading || error) {
+    return <div />;
+  }
+
+  const projectsDatas: ProjectsDataType[] = data.projects.map(
+    ({ name, description, link, projectTechStack }: any) => {
+      return {
+        name,
+        desc: description,
+        url: link,
+        techStack: projectTechStack.map(({ tech }: any) => tech),
+      };
+    }
+  );
+
   if (isHome) {
     return (
       <section
@@ -41,7 +54,7 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
             margin-bottom: 15px;
           `}
         >
-          {projectsData
+          {projectsDatas
             .slice(0, 6)
             .map(
               (
@@ -72,7 +85,7 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
                       `}
                     >
                       {url.map((urlData: LinkProjectsType, key: number) => {
-                        if (urlData.type === LinkProjects.github) {
+                        if (urlData.type === "github") {
                           return (
                             <a
                               key={key}
@@ -90,7 +103,7 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
                               />
                             </a>
                           );
-                        } else if (urlData.type === LinkProjects.link) {
+                        } else if (urlData.type === "link") {
                           return (
                             <a
                               key={key}
@@ -170,7 +183,7 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
           margin-bottom: 15px;
         `}
       >
-        {projectsData.map(
+        {projectsDatas.map(
           ({ name, desc, techStack, url }: ProjectsDataType, key: number) => {
             return (
               <article
@@ -196,7 +209,7 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
                   `}
                 >
                   {url.map((urlData: LinkProjectsType, key: number) => {
-                    if (urlData.type === LinkProjects.github) {
+                    if (urlData.type === "github") {
                       return (
                         <a
                           key={key}
@@ -214,7 +227,7 @@ export default function ProjectSection({ isHome }: ProjectSectionProps) {
                           />
                         </a>
                       );
-                    } else if (urlData.type === LinkProjects.link) {
+                    } else if (urlData.type === "link") {
                       return (
                         <a
                           key={key}

@@ -6,21 +6,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "src/pages/home";
 import Projects from "src/pages/projects";
 import reportWebVitals from "./reportWebVitals";
+import { ApolloProvider } from "@apollo/client";
+import client from "./apollo/client";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          {/* <Route path="about" element={<About />} /> */}
-          <Route path="projects" element={<Projects />} />
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            {/* <Route path="about" element={<About />} /> */}
+            <Route path="projects" element={<Projects />} />
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>
 );
 

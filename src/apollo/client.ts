@@ -5,7 +5,7 @@ const client = new ApolloClient({
   uri: env.GRAPHQL_URL,
   headers: {
     "content-type": "application/json",
-    "x-hasura-admin-secret": env.SECRET,
+    "x-hasura-admin-secret": env.SECRET as string,
   },
   cache: new InMemoryCache(),
 });

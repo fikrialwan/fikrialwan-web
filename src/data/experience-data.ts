@@ -6,9 +6,14 @@ export interface ExperienceDataType {
 
 export const experienceData: ExperienceDataType[] = [
   {
+    company: "PT. Shell Infotech",
+    position: "Frontend Developer",
+    desc: "I am working in PT. Shell Infotech and placement at Astra Internasional since November 2022 until now. As a Frontend Developer,  I am developing or improving some of Sales Operations apps in Astra International such as VOM BIMS ( the app developed using React JS with typescript and mobx-state-tree for State Management), Auto2000 CMS (the app developed using React JS with redux-saga for State Management), QSS (the app developed using HTML, CSS and Jquery),  SCBD Board (the app developed using HTML, CSS and Jquery), Car Status Board (the app developed using React JS with typescript and mobx-state-tree for State) and LMS Rewrite (Rewrite LMS app from Angular to Next JS with typescript and Jotai for State Management).",
+  },
+  {
     company: "PT. Netta Code Indonesia",
     position: "Mobile Developer",
-    desc: "I am working in PT. Nettacode Indonesia as a mobile developer since September 2021 until now. I am developing an android app named PIFA and publish it in playstore. I developed that app using dart programming language and flutter SDK.",
+    desc: "I am working in PT. Nettacode Indonesia as a mobile developer since September 2021 until November 2022. I am developing an android app named PIFA and publish it in playstore. I developed that app using dart programming language and flutter SDK.",
   },
   {
     company: "Catamyst x Codepolitan",

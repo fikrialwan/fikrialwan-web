@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import normalizeCss from "src/styles/normalize-css";
 import theme from "src/styles/theme";
 import Footer from "./footer";
-import Navigation from "./navigation";
+// import Navigation from "./navigation";
 import Aside from "./aside";
 import mq from "src/styles/breakpoints";
 import ScrollToTop from "./scroll-to-top";
@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
     >
       <ScrollToTop />
       <Global styles={normalizeCss} />
-      <Navigation />
+      {/* <Navigation /> */}
       <Aside />
       <main
         className={css`

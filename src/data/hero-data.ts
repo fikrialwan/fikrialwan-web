@@ -30,7 +30,7 @@ export const heroData: HeroDataType = {
     },
     button: {
       title: "Download CV",
-      link: "https://drive.google.com/file/d/1oaAy29bjg7GKSzhMIPnY32gNiXADgfxl/view",
+      link: "https://drive.google.com/file/d/1BJSa5WlZxpHO6r3_KrfSMHOxpZx3E2Ln/view?usp=sharing",
     },
   },
   about: {

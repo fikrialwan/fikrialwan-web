@@ -4,7 +4,7 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import About from "src/pages/about";
 import Home from "src/pages/home";
-import Projects from "src/pages/projects";
+// import Projects from "src/pages/projects";
 import reportWebVitals from "./reportWebVitals";
 import { ApolloProvider } from "@apollo/client";
 import client from "./apollo/client";
@@ -19,7 +19,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />}>
             {/* <Route path="about" element={<About />} /> */}
-            <Route path="projects" element={<Projects />} />
+            {/* <Route path="projects" element={<Projects />} /> */}
             <Route index element={<Home />} />
           </Route>
         </Routes>
